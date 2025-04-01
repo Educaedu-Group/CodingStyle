@@ -1,10 +1,5 @@
 # CodingStyle
 
-## 📥 Instalación
-1. Instalar dependencias
-```sh
-composer require --dev educaedu/coding-style
-```
 ## 💻 Modo uso
 1. Añadir fichero `ecs.php`
 ```php
@@ -18,7 +13,7 @@ return static function (ECSConfig $ecsConfig): void {
     $ecsConfig->sets([CodingStyle::DEFAULT]);
 };
 ```
-2. Ejecutar:
+2. Ejecutar comando:
     ```sh
     /vendor/bin/ecs check
     ```
