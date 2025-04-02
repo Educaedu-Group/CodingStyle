@@ -1,0 +1,20 @@
+{
+  "name": "educaedu/coding-style",
+  "description": "PHP Coding Style rules",
+  "type": "library",
+  "keywords": ["static analysis", "code style"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Educaedu"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Educaedu\\": "src/"
+    }
+  },
+  "require": {
+    "symplify/easy-coding-standard": "^12.5"
+  }
+}
