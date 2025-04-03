@@ -124,7 +124,14 @@ return static function (ECSConfig $ecsConfig): void {
         ['space' => 'single', 'space_multiple_catch' => 'single']
     );
     $ecsConfig->ruleWithConfiguration(ArraySyntaxFixer::class, ['syntax' => 'short']);
-    $ecsConfig->ruleWithConfiguration(LineLengthFixer::class, [LineLengthFixer::LINE_LENGTH => 120]);
+    $ecsConfig->ruleWithConfiguration(
+        LineLengthFixer::class,
+        [
+            LineLengthFixer::LINE_LENGTH => 120,
+            'break_long_lines'           => true,
+            'inline_short_lines'         => false,
+        ]
+    );
     $ecsConfig->ruleWithConfiguration(
         YodaStyleFixer::class,
         ['equal' => false, 'identical' => false, 'less_and_greater' => false]
