@@ -15,8 +15,8 @@ return static function (ECSConfig $ecsConfig): void {
 ```
 2. Ejecutar comando:
     ```sh
-    Project$ vendor/bin/ecs check
+    vendor/bin/ecs check
     ```
     ```sh
-    Project$ vendor/bin/ecs check --fix
+    vendor/bin/ecs check --fix
     ```
