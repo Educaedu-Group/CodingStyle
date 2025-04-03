@@ -28,6 +28,7 @@ use PhpCsFixer\Fixer\ControlStructure\NoUselessElseFixer;
 use PhpCsFixer\Fixer\ControlStructure\SimplifiedIfReturnFixer;
 use PhpCsFixer\Fixer\ControlStructure\TrailingCommaInMultilineFixer;
 use PhpCsFixer\Fixer\ControlStructure\YodaStyleFixer;
+use PhpCsFixer\Fixer\FunctionNotation\MethodArgumentSpaceFixer;
 use PhpCsFixer\Fixer\Import\FullyQualifiedStrictTypesFixer;
 use PhpCsFixer\Fixer\Import\GlobalNamespaceImportFixer;
 use PhpCsFixer\Fixer\Import\NoLeadingImportSlashFixer;
@@ -130,6 +131,13 @@ return static function (ECSConfig $ecsConfig): void {
             LineLengthFixer::LINE_LENGTH => 120,
             'break_long_lines'           => true,
             'inline_short_lines'         => false,
+        ]
+    );
+    $ecsConfig->ruleWithConfiguration(
+        MethodArgumentSpaceFixer::class,
+        [
+            'on_multiline'                     => 'ensure_fully_multiline',
+            'keep_multiple_spaces_after_comma' => false,
         ]
     );
     $ecsConfig->ruleWithConfiguration(
